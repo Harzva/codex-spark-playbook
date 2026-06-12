@@ -11,6 +11,8 @@
 <p align="center">
   <a href="./SKILL.md">Skill</a>
   ·
+  <a href="./skills/cxspark/SKILL.md">cxspark</a>
+  ·
   <a href="./prompts/spark-bounded-task.md">Bounded Task Prompt</a>
   ·
   <a href="./docs/workflow.md">Workflow</a>
@@ -63,12 +65,16 @@ Only Codex accepts or rejects the result.
 
 ## Quick Start
 
-1. Open [`SKILL.md`](./SKILL.md) or [`prompts/spark-bounded-task.md`](./prompts/spark-bounded-task.md).
+1. Open [`SKILL.md`](./SKILL.md), [`skills/cxspark/SKILL.md`](./skills/cxspark/SKILL.md), or [`prompts/spark-bounded-task.md`](./prompts/spark-bounded-task.md).
 2. Replace the task, allowed files, behavior limits, forbidden actions, checks, and risks.
 3. Keep the context small and sanitized.
 4. Ask Spark for summary, touched files, verification, risks, assumptions, and a Spark Usage Report.
 5. If runtime token usage is unavailable, require `token_usage_unavailable`; never estimate token numbers.
 6. Review the result in the current Codex session before accepting anything.
+
+## cxspark Shortcut
+
+`cxspark` is the portable shortcut skill for this playbook. It means "Codex Spark": a fixed work role for small, bounded, non-multimodal tasks. The runtime may assign a temporary worker name each time, but the role boundary stays the same: Spark drafts, parent Codex reviews and accepts.
 
 ## Safety Boundaries
 
@@ -84,6 +90,8 @@ Only Codex accepts or rejects the result.
 | Path | Purpose |
 | --- | --- |
 | [`SKILL.md`](./SKILL.md) | Installable Codex skill entrypoint |
+| [`skills/cxspark/SKILL.md`](./skills/cxspark/SKILL.md) | Shortcut installable skill for the fixed `cxspark` bounded-worker role |
+| [`skills/cxspark/agents/openai.yaml`](./skills/cxspark/agents/openai.yaml) | Optional UI metadata for the `cxspark` role |
 | [`prompts/spark-bounded-task.md`](./prompts/spark-bounded-task.md) | Default delegation prompt for small reviewable tasks |
 | [`docs/workflow.md`](./docs/workflow.md) | Step-by-step operating workflow |
 | [`docs/limitations.md`](./docs/limitations.md) | Quota wording, multimodal limits, and public safety notes |

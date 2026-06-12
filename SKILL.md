@@ -9,6 +9,8 @@ Use this skill when the user asks to use Spark, codex-5.3-spark, gpt-5.3-codex-s
 
 Spark is a bounded draft worker. The parent Codex session remains responsible for planning, reviewing diffs, running required checks, and accepting or rejecting the result.
 
+For a short portable trigger, install or reference [`skills/cxspark/SKILL.md`](skills/cxspark/SKILL.md). `cxspark` is the fixed role name for the same bounded-worker pattern; individual worker instances may still be temporary.
+
 ## Fit Check
 
 Use Spark for:

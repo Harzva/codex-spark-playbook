@@ -1,0 +1,4 @@
+interface:
+  display_name: "cxspark"
+  short_description: "Codex Spark bounded worker shortcut."
+  default_prompt: "Use cxspark for a small, bounded, non-multimodal task."
